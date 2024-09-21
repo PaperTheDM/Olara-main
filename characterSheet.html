@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--Font Source-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <!--Custom styles-->
+    <link rel="stylesheet" href="css/stylesUniv.css">
+    <title>Article Name</title>
+  </head>
+  <body>
+    <h1>Olara</h1>
+
+    <div id="nav-placeholder"></div>
+    
+<main id="wrapper">
+    <div class="container">
+		<div class="row">
+			<div class="bg col-12">
+                <a href="countries.html" class="display" style="text-decoration: underline;">Return</a>
+            </div>
+        </div>
+        <div class="jumbotron stinger" style="background-image: url(images/Ngia-Flag.png); background-size: contain;">
+            <div class="row" style="background-color:rgba(255, 255, 255, 0.8);">
+                <h2 class="bg col-12 center" style="background-color:rgba(255, 255, 255, 0);">Article Title</h2> <br>
+            </div>
+        </div>
+    
+        <div>
+            <p class="center" style="font-style: italic;">Poems, openers, lore</p>
+        </div>
+
+    <div class="row">
+        <form id="formData">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+    
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+    
+            <input type="submit" value="Submit">
+        </form>
+
+        <canvas id="formCanvas" style="display:none"></canvas>
+
+
+
+    </div>
+    </div>
+</main>	
+
+<div id="footer-placeholder"></div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script>
+    window.onload = function() {
+    // Form submission event
+    document.getElementById("formData").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Capture the form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Create the canvas
+        const canvas = document.getElementById("formCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Load the background image
+        const background = new Image();
+        background.src = "images/CharacterSheet-2024-pg1.png"; // Path to the uploaded image
+        background.onload = function() {
+            // Set canvas dimensions to the image dimensions
+            canvas.width = background.width;
+            canvas.height = background.height;
+
+            // Draw the image as the background
+            ctx.drawImage(background, 0, 0);
+
+            // Add form data onto the canvas with specific positions matching the D&D sheet
+            ctx.font = "16px Arial";
+            ctx.fillStyle = "#000";
+
+            // Position text on the character sheet image
+            ctx.fillText("Name: " + name, 100, 100); // Adjust x and y to match the position of 'Name'
+            ctx.fillText("Email: " + email, 100, 150); // Adjust to the right location
+            ctx.fillText("Message: " + message, 100, 200); // Adjust as needed for the message
+
+            // After drawing everything, convert canvas to image
+            const image = canvas.toDataURL("image/png");
+            console.log("Image URL:", image);
+
+            // Create a download link for the image
+            const link = document.createElement('a');
+            link.href = image;
+            link.download = 'character-sheet.png';
+            link.click();
+        };
+    });
+};
+  </script>
+
+  <script src="footerFetcher.js"></script>
+  <script src="fetch.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
