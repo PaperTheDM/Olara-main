@@ -15,7 +15,7 @@
 
     <!--Custom styles-->
     <link rel="stylesheet" href="css/stylesUniv.css">
-    <title>Article Name</title>
+    <title>Character Sheet</title>
   </head>
   <body>
     <h1>Olara</h1>
@@ -26,38 +26,260 @@
     <div class="container">
 		<div class="row">
 			<div class="bg col-12">
-                <a href="countries.html" class="display" style="text-decoration: underline;">Return</a>
+                <a href="tools.html" class="display" style="text-decoration: underline;">Return</a>
             </div>
         </div>
-        <div class="jumbotron stinger" style="background-image: url(images/Ngia-Flag.png); background-size: contain;">
+        <div class="jumbotron stinger" style="background-color:rgb(178, 110, 255); background-size: contain;">
             <div class="row" style="background-color:rgba(255, 255, 255, 0.8);">
-                <h2 class="bg col-12 center" style="background-color:rgba(255, 255, 255, 0);">Article Title</h2> <br>
+                <h2 class="bg col-12 center" style="background-color:rgba(255, 255, 255, 0);">Character Sheet Starter</h2> <br>
             </div>
         </div>
     
         <div>
-            <p class="center" style="font-style: italic;">Poems, openers, lore</p>
+            <p class="center" style="font-style: italic;">*only use content which you have a license to access in accordance to your local laws*</p>
         </div>
 
-    <div class="row">
         <form id="formData">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-    
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message"></textarea><br><br>
-    
+            <div class="row align-items-start">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-3" style="padding-top: 10px;">
+                            <label for="characterName" class="row">Character Name:</label>
+                            <input type="text" id="characterName" name="characterName"><br><br>
+                
+                            <label for="class" class="row">Class:</label>
+                            <input type="text" id="class" name="class"><br><br>
+                
+                            <label for="subClass" class="row">Subclass:</label>
+                            <input type="text" id="subClass" name="subClass"><br><br>
+                        </div>
+                
+                        <div class="col-lg-3 offset-lg-1" style="padding-top: 10px;">
+                            <label for="level" class="row">Level:</label>
+                            <input type="number" id="level" name="level"><br><br>
+                
+                            <label for="race" class="row">Race:</label>
+                            <input type="text" id="race" name="race"><br><br>
+                
+                            <label for="origin" class="row">Background:</label>
+                            <input type="text" id="origin" name="origin"><br><br>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3" style="padding-top: 10px;">
+
+                            <label for="strength" class="row">Strength:</label>
+                            <input type="number" id="strength" name="strength"><br><br>
+
+                            <label for="dexterity" class="row">Dexterity:</label>
+                            <input type="number" id="dexterity" name="dexterity"><br><br>
+
+                            <label for="constitution" class="row">Constitution:</label>
+                            <input type="number" id="constitution" name="constitution"><br><br>
+
+                        </div>
+                        <div class="col-lg-3 offset-lg-1" style="padding-top: 10px;">
+
+                            <label for="intelligence" class="row">Intelligence:</label>
+                            <input type="number" id="intelligence" name="intelligence"><br><br>
+
+                            <label for="wisdom" class="row">Wisdom:</label>
+                            <input type="number" id="wisdom" name="wisdom"><br><br>
+
+                            <label for="charisma" class="row">Charisma:</label>
+                            <input type="number" id="charisma" name="charisma"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3" style="padding-top: 10px;">
+
+                            <label for="armor" class="row">Armor Class:</label>
+                            <input type="text" id="armor" name="armor"><br><br>
+
+                            <label for="speed" class="row">Speed:</label>
+                            <input type="text" id="speed" name="speed"><br><br>
+
+                            <label for="size" class="row">Size:</label>
+                            <input type="text" id="size" name="size"><br><br>
+
+                        </div>
+                        <div class="col-lg-3 offset-lg-1" style="padding-top: 10px;">
+
+                            <label for="maxHP" class="row">Max Hit Points:</label>
+                            <input type="text" id="maxHP" name="maxHP"><br><br>
+
+                            <label for="maxHD" class="row">Max Hit Dice:</label>
+                            <input type="text" id="maxHD" name="maxHD"><br><br>
+
+                            <label for="pP" class="row">Passive Perception:</label>
+                            <input type="text" id="pP" name="pP"><br><br>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3" style="padding-top: 10px;">
+
+                            <label for="init" class="row">Initiative Bonus:</label>
+                            <input type="number" id="init" name="init"><br><br>
+
+                            <label for="weapons" class="row">Weapon Prof:</label>
+                            <input type="text" id="weapons" name="weapons"><br><br>
+
+                            <label for="tools" class="row">Tool Prof:</label>
+                            <input type="text" id="tools" name="tools"><br><br>
+
+                        </div>
+                        <div class="col-lg-3 offset-lg-1" style="padding-top: 10px;">
+
+                            <div class="form-group">
+                                <label for="speciesTraits" class="row">Species Traits:</label>
+                                <textarea id="speciesTraits" name="speciesTraits" rows="4" placeholder="Enter species traits here..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="classFeat" class="row">Class Features:</label>
+                                <textarea id="classFeat" name="classFeat" rows="4" placeholder="Enter class features here..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="feat" class="row">Other Feats:</label>
+                                <textarea id="feat" name="feat" rows="4" placeholder="Enter other feats here..."></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Select Proficiencies:</h4>
+                    <p>Saving Throws:</p>
+                    <label>
+                        <input type="checkbox" value="Strength Save" name="skills"> Strength
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Dexterity Save" name="skills"> Dexterity
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Constitution Save" name="skills"> Constitution
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Intelligence Save" name="skills"> Intelligence
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Wisdom Save" name="skills"> Wisdom
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Charisma Save" name="skills"> Charisma
+                    </label>
+                    
+                    <p>Skills:</p>
+
+                    <input type="checkbox" id="acrobatics" name="skills" value="acrobatics">
+                    <label for="acrobatics">Acrobatics</label>
+                    <br>
+                
+                    <input type="checkbox" id="animalHandling" name="skills" value="animalHandling">
+                    <label for="animalHandling">Animal Handling</label>
+                    <br>
+                
+                    <input type="checkbox" id="arcana" name="skills" value="arcana">
+                    <label for="arcana">Arcana</label>
+                    <br>
+                
+                    <input type="checkbox" id="athletics" name="skills" value="athletics">
+                    <label for="athletics">Athletics</label>
+                    <br>
+                
+                    <input type="checkbox" id="deception" name="skills" value="deception">
+                    <label for="deception">Deception</label>
+                    <br>
+                
+                    <input type="checkbox" id="history" name="skills" value="history">
+                    <label for="history">History</label>
+                    <br>
+                
+                    <input type="checkbox" id="insight" name="skills" value="insight">
+                    <label for="insight">Insight</label>
+                    <br>
+                
+                    <input type="checkbox" id="intimidation" name="skills" value="intimidation">
+                    <label for="intimidation">Intimidation</label>
+                    <br>
+                
+                    <input type="checkbox" id="investigation" name="skills" value="investigation">
+                    <label for="investigation">Investigation</label>
+                    <br>
+                
+                    <input type="checkbox" id="medicine" name="skills" value="medicine">
+                    <label for="medicine">Medicine</label>
+                    <br>
+                
+                    <input type="checkbox" id="nature" name="skills" value="nature">
+                    <label for="nature">Nature</label>
+                    <br>
+                
+                    <input type="checkbox" id="perception" name="skills" value="perception">
+                    <label for="perception">Perception</label>
+                    <br>
+                
+                    <input type="checkbox" id="performance" name="skills" value="performance">
+                    <label for="performance">Performance</label>
+                    <br>
+                
+                    <input type="checkbox" id="persuasion" name="skills" value="persuasion">
+                    <label for="persuasion">Persuasion</label>
+                    <br>
+                
+                    <input type="checkbox" id="religion" name="skills" value="religion">
+                    <label for="religion">Religion</label>
+                    <br>
+                
+                    <input type="checkbox" id="sleightOfHand" name="skills" value="sleightOfHand">
+                    <label for="sleightOfHand">Sleight of Hand</label>
+                    <br>
+                
+                    <input type="checkbox" id="stealth" name="skills" value="stealth">
+                    <label for="stealth">Stealth</label>
+                    <br>
+                
+                    <input type="checkbox" id="survival" name="skills" value="survival">
+                    <label for="survival">Survival</label>
+                    <br>
+
+                    
+                </div>
+
+                <div class="col-lg-3">
+                    <label>
+                        <input type="checkbox" value="light" name="skills"> Light Armor
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="medium" name="skills"> Medium Armor
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="heavy" name="skills"> Heavy Armor
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="shield" name="skills"> Shields
+                    </label>
+                </div>
+            </div>
             <input type="submit" value="Submit">
+            <div style="padding-bottom: 10px;"></div>
         </form>
 
-        <canvas id="formCanvas" style="display:none"></canvas>
+        <div class="row">
+            <canvas id="formCanvas" style="border: 1px solid black;"></canvas>
+        </div>
 
-
-
-    </div>
     </div>
 </main>	
 
@@ -73,10 +295,48 @@
     document.getElementById("formData").addEventListener("submit", function(event) {
         event.preventDefault();
 
-        // Capture the form data
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+        
+        const characterName = document.getElementById("characterName").value;
+        const className = document.getElementById("class").value;
+        const subClassName = document.getElementById("subClass").value;
+        const level = document.getElementById("level").value;
+        const PB = (2 + ((level - 1)/4));
+        const race = document.getElementById("race").value;
+        const origin = document.getElementById("origin").value;
+
+        const strength = document.getElementById("strength").value;
+        const dexterity = document.getElementById("dexterity").value;
+        const constitution = document.getElementById("constitution").value;
+        const intelligence = document.getElementById("intelligence").value;
+        const wisdom = document.getElementById("wisdom").value;
+        const charisma = document.getElementById("charisma").value;
+
+        const modSTR = Math.floor((strength - 10)/2);
+        const modDEX = Math.floor((dexterity - 10)/2);
+        const modCON = Math.floor((constitution - 10)/2);
+        const modINT = Math.floor((intelligence - 10)/2);
+        const modWIS = Math.floor((wisdom - 10)/2);
+        const modCHA = Math.floor((charisma - 10)/2);
+
+        const armor = document.getElementById("armor").value;
+        const speed = document.getElementById("speed").value;
+        const size = document.getElementById("size").value;
+        const maxHP = document.getElementById("maxHP").value;
+        const maxHD = document.getElementById("maxHD").value;
+        const pP = document.getElementById("pP").value;
+
+        const weapons = document.getElementById("weapons").value;
+        const tools = document.getElementById("tools").value;
+        const speciesTraits = document.getElementById("speciesTraits").value;
+        const classFeat = document.getElementById("classFeat").value;
+        const feat = document.getElementById("feat").value;
+
+        let miscInit = 0;
+        const checker = document.getElementById("init");
+        if (checker !== null) {
+            miscInit = parseInt(checker.value) || 0; 
+        }
+        const initiative = modDEX + miscInit;
 
         // Create the canvas
         const canvas = document.getElementById("formCanvas");
@@ -86,23 +346,170 @@
         const background = new Image();
         background.src = "images/CharacterSheet-2024-pg1.png"; // Path to the uploaded image
         background.onload = function() {
-            // Set canvas dimensions to the image dimensions
-            canvas.width = background.width;
-            canvas.height = background.height;
+            // Set canvas dimensions based on background image
+            const aspectRatio = background.naturalWidth / background.naturalHeight;
+            const largeWidth = 2400;
+            const largeHeight = largeWidth / aspectRatio;
+
+            canvas.width = largeWidth;
+            canvas.height = largeHeight;
 
             // Draw the image as the background
-            ctx.drawImage(background, 0, 0);
+            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-            // Add form data onto the canvas with specific positions matching the D&D sheet
-            ctx.font = "16px Arial";
+            // Add form data onto the canvas with specific positions
+            ctx.font = "bold 36px Arial";
             ctx.fillStyle = "#000";
 
             // Position text on the character sheet image
-            ctx.fillText("Name: " + name, 100, 100); // Adjust x and y to match the position of 'Name'
-            ctx.fillText("Email: " + email, 100, 150); // Adjust to the right location
-            ctx.fillText("Message: " + message, 100, 200); // Adjust as needed for the message
+            ctx.fillText(characterName, 100, 110);
+            ctx.fillText(className, 590, 185);
+            ctx.fillText(subClassName, 590, 275);
+            ctx.fillText(level, 1080, 170);
+            ctx.fillText("+" + PB, 210, 600);
+            ctx.fillText(race, 100, 275);
+            ctx.fillText(origin, 100, 185);
 
-            // After drawing everything, convert canvas to image
+            ctx.fillText(strength, 275, 920);
+            ctx.fillText(dexterity, 275, 1390);
+            ctx.fillText(constitution, 275, 1970);
+            ctx.fillText(intelligence, 700, 600);
+            ctx.fillText(wisdom, 700, 1300);
+            ctx.fillText(charisma, 700, 1990);
+            ctx.fillText("+" + modSTR, 150, 900);
+            ctx.fillText("+" + modDEX, 150, 1370);
+            ctx.fillText("+" + modCON, 150, 1950);
+            ctx.fillText("+" + modINT, 570, 590);
+            ctx.fillText("+" + modWIS, 570, 1285);
+            ctx.fillText("+" + modCHA, 570, 1970);
+
+            ctx.fillText(armor, 1320, 190);
+            ctx.fillText(speed, 1390, 575);
+            ctx.fillText(size, 1725, 575);
+            ctx.fillText(maxHP, 1775, 275);
+            ctx.fillText(maxHD, 1975, 275);
+            ctx.fillText(pP, 2150, 575);
+            ctx.fillText("+" + initiative, 1030, 575);
+           
+            const initialFontSize = 36; // Set this to your desired starting font size
+            const maxHeight = 200; // Set this to your desired max height for the text block
+
+            drawWrappedText(ctx, weapons, 200, 2700, 500, maxHeight, initialFontSize, 35);
+            drawWrappedText(ctx, tools, 200, 2950, 500, maxHeight, initialFontSize, 35);
+            drawWrappedText(ctx, speciesTraits, 950, 2380, 500, 550, initialFontSize, 35);
+            drawWrappedText(ctx, classFeat, 980, 1440, 1000, 600, initialFontSize, 35);
+            drawWrappedText(ctx, feat, 1700, 2380, 500, 550, initialFontSize, 35);
+            
+            // Fill in bubbles based on skills
+            submitSkills();
+
+            function drawWrappedText(ctx, text, x, y, maxWidth, maxHeight, initialFontSize, lineHeight) {
+                if (typeof text !== 'string') {
+                    console.error('Invalid text provided:', text);
+                    return; // Exit if the text is not a valid string
+                }
+
+                let words = text.split(' ');
+                let line = '';
+                let fontSize = initialFontSize;
+                let totalHeight = 0; // Track total height of drawn text
+                ctx.font = `${fontSize}px Arial`;
+
+                // Save the initial y position for resetting later
+                const initialY = y;
+
+                // Loop until the text is fully processed
+                for (let i = 0; i < words.length; i++) {
+                    let testLine = line + words[i] + ' ';
+                    let testWidth = ctx.measureText(testLine).width;
+
+                    // If the current line exceeds maxWidth
+                    if (testWidth > maxWidth && line) {
+                        // Draw the line only if it fits
+                        ctx.fillText(line, x, y);
+                        totalHeight += lineHeight; // Update total height
+                        line = words[i] + ' '; // Start a new line with the current word
+                        y += lineHeight; // Move to the next line
+                    } else {
+                        line = testLine; // Continue adding to the current line
+                    }
+
+                    // Check if total height exceeds maxHeight
+                    if (totalHeight + lineHeight > maxHeight) {
+                        // Decrease font size and reset line height
+                        fontSize -= 2; // Decrease font size (adjust as necessary)
+                        ctx.font = `${fontSize}px Arial`;
+                        totalHeight = 0; // Reset total height for recalculation
+                        y = initialY; // Reset y position to the starting y position
+                        line = ''; // Reset line for the new font size
+                        i = -1; // Reset word index to reprocess the line
+
+                        // Check if the font size has reached a minimum limit
+                        if (fontSize <= 8) { // Minimum font size threshold
+                            console.warn('Text too long to fit in specified dimensions. Stopping size reduction.');
+                            break; // Prevent infinite loop if text is too large
+                        }
+                    }
+                }
+
+                // Draw the last line, if any
+                if (line) {
+                    ctx.fillText(line, x, y);
+                }
+            }
+            // Function to handle bubble filling
+            function submitSkills() {
+                const selectedSkills = [];
+                const checkboxes = document.querySelectorAll('input[name="skills"]:checked');
+                
+                checkboxes.forEach((checkbox) => {
+                    selectedSkills.push(checkbox.value);
+                });
+
+                selectedSkills.forEach((skill) => {
+                    switch(skill) {
+                        case "Charisma Save":fillBubble(508, 2130, 15);break;
+                        case "Strength Save":fillBubble(86, 1055, 15);break;
+                        case "Dexterity Save":fillBubble(86, 1525, 15);break;
+                        case "Constitution Save":fillBubble(86, 2105, 15);break;
+                        case "Intelligence Save":fillBubble(508, 749, 15);break;
+                        case "Wisdom Save":fillBubble(508, 1440, 15);break;
+                        case "acrobatics":fillBubble(86, 1605, 15);break;
+                        case "animalHandling":fillBubble(508, 1520, 15);break;
+                        case "arcana":fillBubble(508, 829, 15);break;
+                        case "athletics":fillBubble(86, 1135, 15);break;
+                        case "deception":fillBubble(508, 2210, 15);break;
+                        case "history":fillBubble(508, 885, 15);break;
+                        case "insight":fillBubble(508, 1576, 15);break;
+                        case "intimidation":fillBubble(508, 2266, 15);break;
+                        case "investigation":fillBubble(508, 941, 15);break;
+                        case "medicine":fillBubble(508, 1632, 15);break;
+                        case "nature":fillBubble(508, 997, 15);break;
+                        case "perception":fillBubble(508, 1688, 15);break;
+                        case "performance":fillBubble(508, 2322, 15);break;
+                        case "persuasion":fillBubble(508, 2378, 15);break;
+                        case "religion":fillBubble(508, 1053, 15);break;
+                        case "sleightOfHand":fillBubble(86, 1661, 15);break;
+                        case "stealth":fillBubble(86, 1717, 15);break;
+                        case "survival":fillBubble(508, 1744, 15);break;
+                        case "light":fillBubble(252,2577,15);break;
+                        case "medium":fillBubble(384,2577,15);break;
+                        case "heavy":fillBubble(568,2577,15);break;
+                        case "shield":fillBubble(713,2577,15);break;
+                        default:console.log("Unknown skill selected");break;
+                    }
+                });
+            }
+
+            // Function to fill in the bubble
+            function fillBubble(x, y, radius) {
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'black';
+                ctx.fill();
+            }
+
+            // Convert canvas to image
             const image = canvas.toDataURL("image/png");
             console.log("Image URL:", image);
 
@@ -114,7 +521,7 @@
         };
     });
 };
-  </script>
+</script>
 
   <script src="footerFetcher.js"></script>
   <script src="fetch.js"></script>

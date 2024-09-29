@@ -195,6 +195,15 @@ th{
     width: 100%;
 }
 
+#formCanvas {
+    width: 100vw; 
+    max-width: 1200px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
 .articleTile{
     max-width: 20%;
     min-height: 20%;
