@@ -232,6 +232,7 @@ th, td {
     padding: 8px;
     border: 1px solid #ccc;
     text-align: left;
+    text-size-adjust: 5;
 }
 th {
     cursor: pointer;
@@ -256,6 +257,9 @@ th {
 @media (max-width: 575px){
     p{
         font-size: medium;
+    }
+    th{
+        font-size: small;
     }
 }
 
