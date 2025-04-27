@@ -261,6 +261,9 @@ th {
     th{
         font-size: small;
     }
+    table{
+        font-size: x-small;
+    }
 }
 
 @media (max-width: 500px){
